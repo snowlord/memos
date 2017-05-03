@@ -15,6 +15,9 @@ from mesos.interface import mesos_pb2
 
 header={"UserAgent":"Mozilla/5.0"}
 
+
+
+
 class MyExecutor(Executor):
 
 	def __init__(self):
@@ -32,7 +35,7 @@ class MyExecutor(Executor):
 
 			query_arg = {'numbers':data,'sum':sum([int(d) for d in data.split(" ")])}
 			encode_arg = urllib.urlencode(query_arg)
-			main_url="http://127.0.0.1:3000/results?{param}".format(param=encode_arg)
+			main_url="http://192.168.12.179:8080/?{param}".format(param=encode_arg)
 
 			print urllib2.urlopen(urllib2.Request(main_url,headers=header)).read()
 

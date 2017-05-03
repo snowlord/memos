@@ -32,7 +32,7 @@ def new_task(offer):
 
 class MyScheduler(Scheduler):
 	def __init__(self,executor):
-		self.numbers=["1 2 3","4 5 6"]
+		self.numbers=["1 2 3","4 5 6","7 8 9","10 11 12","13 14 15","16 17 18","19 20 21"]
 		self.counter = 0
 		self.finished_task=0
 		self.executor = executor
@@ -78,6 +78,6 @@ if __name__ == '__main__':
 	driver = MesosSchedulerDriver(
 		MyScheduler(executor),
 		framework,
-		"127.0.0.1:5050"  # assumes running on the master
+		"192.168.12.179:5050"  # assumes running on the master
 	)
 	driver.run()
