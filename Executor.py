@@ -37,7 +37,7 @@ class MyExecutor(Executor):
 			encode_arg = urllib.urlencode(query_arg)
 			main_url="http://192.168.12.179:8080/?{param}".format(param=encode_arg)
 
-			print urllib2.urlopen(urllib2.Request(main_url,headers=header)).read()
+			print(urllib2.urlopen(urllib2.Request(main_url,headers=header)).read())
 
 			
 
